@@ -90,17 +90,23 @@ if(empty($row[0])) {
 					</label>
 					<input type="hidden" name="npm" value="<?=$npm?>">
 					<select name="tiga" id="tiga"class="form-control">
+					<optgroup label="<?="CABANG ".strtoupper($row[3])?>">
 					<?php 
 					$query = "SELECT * FROM `$row[3]`";
 					$sql = mysqli_query($link, $query);
 					while ($row2 = mysqli_fetch_row($sql)) {
 						echo '<option value="'.$row2[1].'">'.$row2[1].'</option>';								
 					}
+					echo "</optgroup>";
+					?>					
+					<optgroup label="<?="CABANG ".strtoupper($row[4])?>">
+					<?php
 					$query = "SELECT * FROM `$row[4]`";
 					$sql = mysqli_query($link, $query);
 					while ($row2 = mysqli_fetch_row($sql)) {
 						echo '<option value="'.$row2[1].'">'.$row2[1].'</option>';								
 					}
+					echo "</optgroup>";
 					?>
 						
 						
@@ -114,17 +120,23 @@ if(empty($row[0])) {
 					</label>
 					
 					<select name="empat" id="empat"class="form-control">
+					<optgroup label="<?="CABANG ".strtoupper($row[3])?>">
 						<?php 
 					$query = "SELECT * FROM `$row[3]`";
 					$sql = mysqli_query($link, $query);
 					while ($row2 = mysqli_fetch_row($sql)) {
 						echo '<option value="'.$row2[1].'">'.$row2[1].'</option>';								
 					}
+					echo "</optgroup>";
+					?>					
+					<optgroup label="<?="CABANG ".strtoupper($row[4])?>">
+					<?php
 					$query = "SELECT * FROM `$row[4]`";
 					$sql = mysqli_query($link, $query);
 					while ($row2 = mysqli_fetch_row($sql)) {
 						echo '<option value="'.$row2[1].'">'.$row2[1].'</option>';								
 					}
+					echo "</optgroup>";
 					?>
 					</select>
 				</div>
@@ -147,7 +159,7 @@ if(empty($row[0])) {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Rahmat 2015 dengan template <a rel="nofollow" href="http://startbootstrap.com/template-overviews/blog-post/">Blog Post</a></p>
+                    <p>Copyright &copy; Rahmat Burhanudin 2015 dengan template <a rel="nofollow" href="http://startbootstrap.com/template-overviews/blog-post/">Blog Post</a></p>
                 </div>
             </div>
             <!-- /.row -->
